@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<h1>
+  <%= @recipe.name %>
+</h1>
+<div class="show_course">
+  <%= @recipe.course %>
+</div>
+<div class="show_description">
+  <%= @recipe.description %>
+</div>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@recipe.picture_url,class:"recipe_image") if @recipe.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>
