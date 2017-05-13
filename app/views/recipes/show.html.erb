@@ -9,10 +9,9 @@
   <%= @recipe.description %>
 </div>
 
-<p>
-  <strong>Picture:</strong>
+<div>
   <%= image_tag(@recipe.picture_url,class:"recipe_image") if @recipe.picture.present? %>
-</p>
+</div>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
